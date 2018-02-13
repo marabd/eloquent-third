@@ -12,15 +12,15 @@
   <div>1. The sum of the remainder of 23 - 3 divided by 4 and 50 is?</div>
   <div id="arithmetic"></div>
   <div>2. Display the poem here!</div>
-  <div id="poem-back-ticks">2. Display the poem here using back ticks!</div>
-  <div id="poem-double-quotes">3. Display the poem here using double quotes!</div>
-  <div id="poem-single-quotes">4. Display the poem here using single quotes!</div>
+  <div id="poem-back-ticks"></div>
+  <div id="poem-double-quotes"></div>
+  <div id="poem-single-quotes"></div>
   <div>3. Who is the author of the poem?</div>
   <input id="author-question"></input>
   <div id="author-answer-check">No Answer Yet</div>
   <script>
     //do the math described in english with javascript
-    const arithmetic = 'currently unkown!'
+    const arithmetic = 5 + 23 - 3 % 2
     document.getElementById("arithmetic").innerHTML = arithmetic;
 
     //demonstrate multi line strings using back ticks, then double quotes, then single quotes
@@ -30,12 +30,12 @@
     // Then there's a pair of us!
     // Don't tell! they'd advertise – you know!
 
-    const poemBackTicks = ''
+    const poemBackTicks = 'Display the poem here using back ticks!'
     document.getElementById('poem-back-ticks').innerHTML = poemBackTicks
-    const poemSingleQuotes = 'no poem yet!'
+    const poemSingleQuotes = 'Display the poem here using double quotes!'
     document.getElementById('poem-single-quotes').innerHTML = poemSingleQuotes
-    const poemDoubleQuotes = 'no poem yet!'
-    document.getElementById('poem-single-quotes').innerHTML = poemSingleQuotes
+    const poemDoubleQuotes = 'Display the poem here using single quotes!'
+    document.getElementById('poem-double-quotes').innerHTML = poemDoubleQuotes
 
     const authorQuestion = document.getElementById('author-question')
     const authorAnswerCheck = document.getElementById('author-answer-check')
@@ -44,8 +44,6 @@
       const answer = event.target.value
       authorAnswerCheck.innerHTML = 'INCORRECT'
     })
-
-
   </script>
 </body>
 
