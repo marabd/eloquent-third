@@ -13,38 +13,42 @@
   <div id="arithmetic"></div>
   <div>2. Display the poem here!</div>
   <div id="poem-back-ticks"></div>
+  <br />
   <div id="poem-double-quotes"></div>
+  <br />
   <div id="poem-single-quotes"></div>
   <div>3. Who is the author of the poem?</div>
   <input id="author-question"></input>
   <div id="author-answer-check">No Answer Yet</div>
   <script>
-    //do the math described in english with javascript
-    const arithmetic = 5 + 23 - 3 % 2
-    document.getElementById("arithmetic").innerHTML = arithmetic;
+  //do the math described in english with javascript
+const arithmetic = 5 + 23 - 3 % 2;
+document.getElementById("arithmetic").innerHTML = arithmetic;
 
-    //demonstrate multi line strings using back ticks, then double quotes, then single quotes
+//demonstrate multi line strings using back ticks, then double quotes, then single quotes
 
-    // I'm Nobody! Who are you?
-    // Are you – Nobody – too?
-    // Then there's a pair of us!
-    // Don't tell! they'd advertise – you know!
+// I'm Nobody! Who are you?
+// Are you – Nobody – too?
+// Then there's a pair of us!
+// Don't tell! they'd advertise – you know!
 
-    const poemBackTicks = 'Display the poem here using back ticks!'
-    document.getElementById('poem-back-ticks').innerHTML = poemBackTicks
-    const poemSingleQuotes = 'Display the poem here using double quotes!'
-    document.getElementById('poem-single-quotes').innerHTML = poemSingleQuotes
-    const poemDoubleQuotes = 'Display the poem here using single quotes!'
-    document.getElementById('poem-double-quotes').innerHTML = poemDoubleQuotes
+const poemBackTicks = `I'm Nobody! Who are you?<br />Are you - Nobody - too?<br />Then there's a pair of us!<br />Don't tell! they'd advertise - you know!`;
+document.getElementById("poem-back-ticks").innerHTML = poemBackTicks;
+const poemDoubleQuotes =
+  "I'm Nobody! Who are you?<br />Are you - Nobody - too?<br />Then there's a pair of us!<br />Don't tell! they'd advertise - you know!";
+document.getElementById("poem-double-quotes").innerHTML = poemDoubleQuotes;
+const poemSingleQuotes = 'I\'m Nobody! Who are you?<br />Are you - Nobody - too?<br />Then there\'s a pair of us!<br />Don\'t tell! they\'d advertise - you know!';
+document.getElementById("poem-single-quotes").innerHTML = poemSingleQuotes;
 
-    const authorQuestion = document.getElementById('author-question')
-    const authorAnswerCheck = document.getElementById('author-answer-check')
-    authorQuestion.addEventListener('blur', (event) => {
-      //use logical operators to display 'CORRECT' if the answer matches "Emily Dickinson"
-      const answer = event.target.value
-      authorAnswerCheck.innerHTML = 'INCORRECT'
-    })
-  </script>
+const authorQuestion = document.getElementById("author-question");
+const authorAnswerCheck = document.getElementById("author-answer-check");
+authorQuestion.addEventListener("blur", event => {
+  //use logical operators to display 'CORRECT' if the answer matches "Emily Dickinson"
+  const answer = event.target.value === 'Emily Dickinson' ? "CORRECT" : "INCORRECT";
+  authorAnswerCheck.innerHTML = answer;
+
+});
+</script>
 </body>
 
 </html>
